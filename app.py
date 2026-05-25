@@ -69,8 +69,12 @@ with col2:
                     )
                     
                     resultado_real = resposta.choices[0].message.content
-                    st.markdown(resultado_real)
-                    st.success("Pronto! Anamnese estruturada com sucesso.")
+                    resultado_real = resposta.choices[0].message.content
+                    
+                    # 📋 EXIBIÇÃO COM BOTÃO DE COPIAR NATIVO
+                    st.markdown("### 📄 Texto Pronto:")
+                    st.code(resultado_real, language="markdown")
+                    st.success("Pronto! Clique no ícone que fica no canto superior direito da caixa preta acima para copiar.")
                     
                 except Exception as e:
                     st.error(f"Ops, ocorreu um erro ao falar com a IA: {e}")
