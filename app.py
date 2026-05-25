@@ -18,7 +18,7 @@ with col1:
     st.subheader("✍️ Anotações do Médico")
     texto_baguncado = st.text_area(
         "Insira as informações da consulta:",
-        placeholder="Ex: maria luisa bezerra de queiroz, dor de cabeça do lado direito, tem 2 dias sem parar...",
+        placeholder="Ex: Winicius Jr, dor de cabeça do lado direito, tem 2 dias sem parar...",
         height=300
     )
     botao_estruturar = st.button("🚀 Estruturar Anamnese", use_container_width=True)
