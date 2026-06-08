@@ -10,7 +10,27 @@ API_KEY = st.secrets["OPENAI_API_KEY"]
 st.title("🩺 AnamneMed")
 st.subheader("Transforme anotações soltas em anamneses estruturadas instantaneamente")
 st.markdown("---")
-
+# ========================================================
+# 📲 COMPONENTE DA BARRA LATERAL (SIDEBAR INSTITUCIONAL)
+# ========================================================
+with st.sidebar:
+    st.title("🩺 AnamneMed AI")
+    st.subheader("Sua assistente de produtividade clínica")
+    st.markdown("---")
+    
+    # 🛡️ Blindagem Jurídica e Aviso Legal
+    st.markdown("### 🛡️ Aviso Legal")
+    st.info(
+        "O AnamneMed AI é uma ferramenta exclusiva de suporte à documentação e digitação clínica. "
+        "A Inteligência Artificial não emite diagnósticos, não prescreve tratamentos e não substitui o julgamento médico. "
+        "A revisão, validação e assinatura final do documento gerado são de responsabilidade 100% exclusiva do médico responsável."
+    )
+    
+    st.markdown("---")
+    st.markdown("⚙️ **Plataforma:** Versão 1.0 (MVP)")
+    st.markdown("🚀 *Desenvolvido para Médicos e Acadêmicos*")
+    st.markdown("💬 [Suporte & Feedback](mailto:suporte@anamnedmed.com)")
+# ========================================================
 # Dividindo a tela ao meio
 col1, col2 = st.columns(2)
 
