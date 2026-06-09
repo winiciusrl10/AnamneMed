@@ -11,25 +11,37 @@ st.title("🩺 AnamneMed")
 st.subheader("Transforme anotações soltas em anamneses estruturadas instantaneamente")
 st.markdown("---")
 # ========================================================
-# 📲 COMPONENTE DA BARRA LATERAL (SIDEBAR INSTITUCIONAL)
+# 📲 COMPONENTE DA BARRA LATERAL MINIMALISTA (ESTILO APPLE)
 # ========================================================
 with st.sidebar:
-    st.title("🩺 AnamneMed AI")
-    st.subheader("Sua assistente de produtividade clínica")
+    # Título principal mais limpo e reduzido
+    st.markdown("<h1 style='text-align: center; font-size: 24px; margin-bottom: 0px;'>🩺 AnamneMed</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; font-size: 14px; color: gray; margin-top: 0px; margin-bottom: 30px;'>Assistente Clínica de IA</p>", unsafe_allow_html=True)
     st.markdown("---")
     
-    # 🛡️ Blindagem Jurídica e Aviso Legal
+    # Lista de Navegação/Ações limpa (Inspirada no ecrã do Mail)
+    st.markdown("### 🗺️ Navegação")
+    st.markdown("🆕 **Nova Consulta**")
+    st.markdown("<span style='color: gray;'>🏠 Home (Em breve)</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color: gray;'>📂 Pacientes (Em breve)</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color: gray;'>⚙️ Configurações (Em breve)</span>", unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # 🛡️ Blindagem Jurídica com texto cinzento discreto (sem caixas pesadas)
     st.markdown("### 🛡️ Aviso Legal")
-    st.info(
+    st.markdown(
+        "<p style='font-size: 13px; color: gray; text-align: justify;'>"
         "O AnamneMed AI é uma ferramenta exclusiva de suporte à documentação e digitação clínica. "
         "A Inteligência Artificial não emite diagnósticos, não prescreve tratamentos e não substitui o julgamento médico. "
         "A revisão, validação e assinatura final do documento gerado são de responsabilidade 100% exclusiva do médico responsável."
+        "</p>",
+        unsafe_allow_html=True
     )
     
-    st.markdown("---")
-    st.markdown("⚙️ **Plataforma:** Versão 1.0 (MVP)")
-    st.markdown("🚀 *Desenvolvido para Médicos e Acadêmicos*")
-    st.markdown("💬 [Suporte & Feedback](mailto:suporte@anamnedmed.com)")
+    # Espaçamento para o rodapé
+    st.markdown("<br><br><br><br><br>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; font-size: 11px; color: gray;'>AnamneMed v1.0 (MVP) <br> Desenvolvido para Médicos</p>", unsafe_allow_html=True)
 # ========================================================
 # Dividindo a tela ao meio
 col1, col2 = st.columns(2)
