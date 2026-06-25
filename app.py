@@ -7,6 +7,16 @@ st.set_page_config(page_title="AnamneMed AI", page_icon="🩺", layout="wide")
 # Agora o código procura a chave no cofre digital seguro da nuvem
 API_KEY = st.secrets["OPENAI_API_KEY"]
 
+# 🔄 CONTROLADORES DE MEMÓRIA (Banco de dados temporário do site)
+if "texto_medico" not in st.session_state:
+    st.session_state.texto_medico = ""
+
+if "historico_pacientes" not in st.session_state:
+    st.session_state.historico_pacientes = [] # Aqui ficarão salvas as anamneses
+
+if "anamnese_pronta" not in st.session_state:
+    st.session_state.anamnese_pronta = "" # Guarda o texto gerado pela IA para não sumir
+
     # ========================================================
     # 📲 COMPONENTE DA BARRA LATERAL MINIMALISTA (ESTILO APPLE)
     # ========================================================
@@ -44,16 +54,6 @@ if   aba_selecionada == "🆕 Nova Consulta":
     st.title("🩺 AnamneMed")
     st.subheader("Transforme anotações soltas em anamneses estruturadas instantaneamente")
     st.markdown("---")
-
-# 🔄 CONTROLADORES DE MEMÓRIA (Banco de dados temporário do site)
-if "texto_medico" not in st.session_state:
-    st.session_state.texto_medico = ""
-
-if "historico_pacientes" not in st.session_state:
-    st.session_state.historico_pacientes = [] # Aqui ficarão salvas as anamneses
-
-if "anamnese_pronta" not in st.session_state:
-    st.session_state.anamnese_pronta = "" # Guarda o texto gerado pela IA para não sumir
 
     # ========================================================
     # Dividindo a tela ao meio
